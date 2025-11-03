@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALL PEMBAYARAN VANZZ HOST</title>
+  <style>
+    body {
+      background-color: #b3daff; /* soft blue */
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      color: #ff0000; /* merah neon */
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #ff0000;
+      text-shadow: 0 0 10px #ff0000;
+      margin-bottom: 30px;
+    }
+
+    button {
+      display: block;
+      width: 250px;
+      margin: 15px auto;
+      padding: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      background-color: #0066cc;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #004c99;
+      transform: scale(1.05);
+    }
+
+    .payment-box {
+      background-color: #cce6ff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: none;
+      color: #ff0000;
+    }
+
+    .payment-box p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-weight: bold;
+      font-size: 18px;
+      color: #ff0000;
+      text-shadow: 0 0 10px #ff0000;
+    }
+
+    a {
+      color: #ff0000;
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>ALL PEMBAYARAN VANZZ HOST</h1>
+
+  <button id="btnDana">PEMBAYARAN DANA</button>
+  <div id="boxDana" class="payment-box">
+    <p><strong>NOPE:</strong> 081367236360</p>
+    <p><strong>NAMA PENERIMA:</strong> SUCI***</p>
+    <p><strong>⚠️ WAJIB SERTAKAN BUKTI TF</strong></p>
+    <p>Jika tidak ada, transaksi tidak akan dilanjutkan.</p>
+  </div>
+
+  <button id="btnGopay">PEMBAYARAN GOPAY</button>
+  <div id="boxGopay" class="payment-box">
+    <p><strong>NOPE:</strong> 085126747481</p>
+    <p><strong>NAMA PENERIMA:</strong> VANZZ HOST</p>
+    <p><strong>⚠️ WAJIB SERTAKAN BUKTI TF</strong></p>
+    <p>Jika tidak ada, transaksi tidak akan dilanjutkan.</p>
+  </div>
+
+  <button id="btnQris">QRISS</button>
+
+  <br><br>
+
+  <button id="btnDeveloper">DEVELOPER</button>
+
+  <p class="footer">ALL TRX NO REFF</p>
+
+  <script>
+    // Tombol DANA
+    const btnDana = document.getElementById('btnDana');
+    const boxDana = document.getElementById('boxDana');
+    btnDana.addEventListener('click', () => {
+      boxDana.style.display = (boxDana.style.display === 'block') ? 'none' : 'block';
+      boxGopay.style.display = 'none';
+    });
+
+    // Tombol GOPAY
+    const btnGopay = document.getElementById('btnGopay');
+    const boxGopay = document.getElementById('boxGopay');
+    btnGopay.addEventListener('click', () => {
+      boxGopay.style.display = (boxGopay.style.display === 'block') ? 'none' : 'block';
+      boxDana.style.display = 'none';
+    });
+
+    // Tombol QRIS
+    const btnQris = document.getElementById('btnQris');
+    btnQris.addEventListener('click', () => {
+      const newWindow = window.open('', '_blank');
+      newWindow.document.write(`
+        <html>
+        <head>
+          <title>QRISS VANZZ HOST</title>
+          <style>
+            body {
+              background-color: #b3daff;
+              font-family: Arial, sans-serif;
+              color: #ff0000;
+              text-align: center;
+              padding: 50px;
+              font-size: 20px;
+              text-shadow: 0 0 10px #ff0000;
+            }
+          </style>
+        </head>
+        <body>
+          <h1>QRISS?</h1>
+          <p>Mintak sama ADMIN VANZZ sesuai nominal 💸</p>
+        </body>
+        </html>
+      `);
+    });
+
+    // Tombol Developer
+    const btnDeveloper = document.getElementById('btnDeveloper');
+    btnDeveloper.addEventListener('click', () => {
+      window.location.href = 'https://t.me/VanzzHost';
+    });
+  </script>
+</body>
+</html>
